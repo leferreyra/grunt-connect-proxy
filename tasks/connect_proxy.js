@@ -52,7 +52,8 @@ module.exports = function(grunt) {
               server: httpProxy.createProxyServer({
                 target: proxyOption,
                 secure: proxyOption.https,
-                xfwd: proxyOption.xforward
+                xfwd: proxyOption.xforward,
+                agent: proxyOption.agent
               }),
               config: proxyOption
             });
